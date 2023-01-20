@@ -1,6 +1,7 @@
 import random
 name = "Jack"
-question = "Should we cast Addie"
+question = "Should we cast this person for Survivor's season"
+#this is not how I decided who at casting I just thought it was silly
 answer = ""
 
 random_number = random.randint(1,9)
