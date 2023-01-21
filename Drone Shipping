@@ -1,0 +1,47 @@
+#Take in a weight then determine cheapest way to ship
+
+weight = 30
+#flat charge
+ground = 20
+#non changing
+ground_premium = 125
+drone = 0
+
+#Ground pricing 
+if weight <= 2:
+  ground += (1.5 * weight)
+elif weight <= 6:
+  ground += (3 * weight)
+elif weight <= 10:
+  ground += (4 * weight)
+else:
+  ground += (4.25 * weight)
+
+print("Ground Pricing: ", ground)
+print("Ground Premium Pricing: ", ground_premium)
+
+if weight <= 2:
+  drone += (4.5 * weight)
+elif weight <= 6:
+  drone += (9 * weight)
+elif weight <= 10:
+  drone += (12 * weight)
+else:
+  drone += (14.25 * weight)
+
+print("Drone Shipping: ", drone)
+
+
+if ground < ground_premium:
+  if ground > drone:
+    print("Drone Shipping is cheapest with: ", drone)
+  elif ground < drone:
+    print("Ground Shipping is cheapest with: ", ground)
+##if ground is greater than ground premium
+elif ground_premium < drone:
+  print("Ground Premium shipping is cheapest with: ", ground_premium)
+else:
+  print("Drone is the cheapest with: ", drone)
+
+
+
